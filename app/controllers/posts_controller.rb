@@ -14,4 +14,9 @@ class PostsController < ApplicationController
        render posts_path
     end
  end
+
+ def news_item_params
+      params.require(:post).permit(:title, :content, :image)
+  end
+
 end
