@@ -3,19 +3,51 @@ class PostsController < ApplicationController
     @posts = Post.order( created_at: :desc)
   end
 
+  def edit
+      @post = Post.find( params[:id] )
+  end
+
+  def update
+      @post = Post.find( params[:id] )
+
+      if @post.update_attributes( post_params )
+       redirect_to @post
+     else
+       render 'edit'
+     end
+   end
+
+  def new
+      @post = Post.new
+   end
+
+  def show
+    @post = Post.find( params[:id])
+  end
+
   def create
-    post_params = params.require( :post ).permit( :content )
+    post = Post.new( post_params)
 
-    @post = Post.new( content: post_params[:content] )
-
-    if @post.save
+    if post.save
        redirect_to posts_path
     else
        render posts_path
     end
  end
 
- def news_item_params
+ def destroy
+   @post = Post.find( params[:id])
+
+   user_id = @post.user_id
+
+   @post.destroy
+
+   redirect_to posts_path( user_id )
+ end
+
+ private
+
+ def post_params
       params.require(:post).permit(:title, :content, :image)
   end
 

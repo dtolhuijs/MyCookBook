@@ -1,5 +1,8 @@
-<h1>Posts</h1>
-<%= render "form" %>
+<h1>Popular Posts</h1>
+<% @posts.each do |post| %>
+    <a href="<%= post_path post%>" class="summary">
+      <%= image_tag(post.image.thumbnail.url, :class => "thumbnail inline") %>
+      <h4><%= post.title %></h4>
+    </a>
+<% end %>
 <br>
-
-<%= render @posts %>
