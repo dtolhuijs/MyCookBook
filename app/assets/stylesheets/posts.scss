@@ -2,13 +2,9 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 img.bg {
-  min-height: 100%;
-  min-width: 1024px;
-  width: 100%;
+  width: 400px;
   height: auto;
   position: fixed;
-  top: 0;
-  left: 0;
 }
 
 .content {
@@ -23,3 +19,17 @@ img.bg {
      line-height: 50px;
    }
  }
+
+ .summary{
+  background: none;
+  text-decoration: none;
+  width: 300px;
+  height: 350px;
+  overflow: hidden;
+  float: left;
+  &:hover{
+    background: none;
+    text-decoration: none;
+
+  }
+}

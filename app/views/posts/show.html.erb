@@ -1,24 +1,13 @@
 <p id="notice"><%= notice %></p>
 <%= image_tag @post.image_url.to_s, class: 'bg' %>
 
-
-<p>
-  <strong>Title:</strong>
-  <%= @post.title %>
-</p>
-
-<p>
-  <strong>Content:</strong>
-  <%= @post.content %>
-</p>
-
-
 <div class="content">
 <h1><%= @post.title %></h1>
 <p>
   <%= @post.content %>
 </p>
-</div>
+   <button type="button" class="btn btn-info"><%= link_to "Edit", edit_post_path( @post) %></button>
+   <button type="button" class="btn btn-info"><%= link_to "Back", post_path %></button>
+   <button type="button" class="btn btn-danger"><%= link_to "Delete", post_path( @post ), method: :delete, data: { confirm: "Are you sure?" }%> </button>
 
-<%= link_to 'Edit', edit_post_path(@npost) %> |
-<%= link_to 'Back', posts_path %>
+</div>
