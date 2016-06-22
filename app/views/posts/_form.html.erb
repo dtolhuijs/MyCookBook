@@ -3,8 +3,11 @@
     <div class="input-group col-xs-12">
       <div class="col-xs-8"><%= f.text_field :content, class: "form-control" %></div>
           <p class="col-xs-4">
-           <%= f.label :image %><br>
-           <%= f.file_field :image %>
+            <a href="<%= post_path post%>" class="summary">
+              <%= image_tag(post.image.thumbnail.url, :class => "thumbnail inline") %>
+              <br>
+              <h4><%= post.title %></h4>
+            </a>= f.file_field :image %>
          </p>
          <div class="actions">
            <%=f.submit %>
