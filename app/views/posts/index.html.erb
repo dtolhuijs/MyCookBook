@@ -2,7 +2,7 @@
 <% @posts.each do |post| %>
     <a href="<%= post_path post%>" class="summary">
       <%= image_tag(post.image.thumbnail.url, :class => "thumbnail inline") %>
+      <br>
       <h4><%= post.title %></h4>
     </a>
 <% end %>
-<br>
