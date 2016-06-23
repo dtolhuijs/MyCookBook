@@ -2,12 +2,15 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 main {
-  background-color: #8FC040;
+  background: rgba(145,191,51,0.7);
   text-align: center;
 }
-
+h2 {
+  color: #ffffff;
+}
 .container p {
-  color: #006000;
+  color: #ffffff;
+  padding: 0px 120px;
 }
 .container a {
   color: #ffffff;
