@@ -26,11 +26,11 @@ class PostsController < ApplicationController
   end
 
   def create
-    @post = Post.new( content: post_params[:content] )
+    @post = Post.new(post_params)
     @post.user = current_user
 
-    if post.save
-       redirect_to posts_path
+    if @post.save
+       redirect_to @post
     else
        render 'new'
     end
