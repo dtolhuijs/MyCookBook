@@ -15,7 +15,36 @@
  */
  @import "bootstrap-sprockets";
  @import "bootstrap";
- 
- main {
-    padding-top: 80px;
- }
+ @import url(https://fonts.googleapis.com/css?family=Amatic+SC:400,700|Source+Sans+Pro:400,300,700);
+body {
+  background-image: image-url("superb_italian_food.jpg");
+}
+main {
+  padding-top: 80px;
+}
+h1 {
+  font-family: 'Amatic SC', cursive;
+  font-size: 6em;
+  color: #ffffff;
+}
+h2 {
+  font-family: 'Amatic SC', cursive;
+  font-size: 3em;
+}
+p {
+  font-size: 1.25em;
+  color: #006000;
+}
+a {
+  color: #000000;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.navbar-brand {
+  font-family: 'Amatic SC', cursive;
+  font-size: 1.8em;
+  color: #006000;
+}
