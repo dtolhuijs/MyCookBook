@@ -1,5 +1,9 @@
-<p id="notice"><%= notice %></p>
-<%= image_tag @post.image_url.to_s, class: 'bg' %>
+  <p id="notice"><%= notice %></p>
+  <%= link_to post_path post, class: "summary" %>
+  <%= image_tag(post.image.thumbnail.url, :class => "thumbnail inline") %>
+  <br>
+  <h4><%= post.title %></h4>
+  <%= image_tag @post.image_url.to_s, class: 'bg' %>
 
 <div class="content">
 <h1><%= @post.title %></h1>

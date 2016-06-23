@@ -32,15 +32,9 @@ class PostsController < ApplicationController
     if post.save
        redirect_to posts_path
     else
-       render posts_path
+       render 'new'
     end
  end
-
- def user
-      @user = User.find( params[:user_id] )
-
-      @posts = Post.where( user: @user ).order( created_at: :desc )
-   end
 
  def destroy
    @post = Post.find( params[:id])
@@ -51,6 +45,12 @@ class PostsController < ApplicationController
 
    redirect_to posts_path( user_id )
  end
+
+ def user
+      @user = User.find( params[:user_id] )
+
+      @posts = Post.where( user: @user ).order( created_at: :desc )
+   end
 
  private
 
