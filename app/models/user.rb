@@ -1,5 +1,7 @@
 class User < ActiveRecord::Base
   has_many :posts
+  has_and_belongs_to_many :friends, join_table: :friends_users
+
   def handle
     self.email.split('@')[0]
   end

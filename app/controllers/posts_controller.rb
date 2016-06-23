@@ -26,12 +26,13 @@ class PostsController < ApplicationController
   end
 
   def create
-    post = Post.new( post_params)
+    @post = Post.new(post_params)
+    @post.user = current_user
 
-    if post.save
-       redirect_to posts_path
+    if @post.save
+       redirect_to @post
     else
-       render posts_path
+       render 'new'
     end
  end
 
@@ -44,6 +45,12 @@ class PostsController < ApplicationController
 
    redirect_to posts_path( user_id )
  end
+
+ def user
+      @user = User.find( params[:user_id] )
+
+      @posts = Post.where( user: @user ).order( created_at: :desc )
+   end
 
  private
 
