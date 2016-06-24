@@ -2,6 +2,7 @@ class User < ActiveRecord::Base
   mount_uploader :avatar, ImageUploader
 
   has_many :posts
+  has_many :likes
   has_and_belongs_to_many :friends, join_table: :friends_users
 
   def handle
