@@ -3,6 +3,8 @@
 <br>
 
 <% @posts.each do |post| %>
+  <h1><%= post.title %></h1>
+  <%= image_tag post.image.url %>
    <h4><%= post.content %></h4>
 <% end %>
 <br>
