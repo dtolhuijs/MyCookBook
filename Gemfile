@@ -1,5 +1,14 @@
 source 'https://rubygems.org'
 
+group :test, :development do
+  gem "rspec-rails"
+  gem 'selenium-webdriver'
+end
+
+group :test do
+  gem "capybara"
+end
+
 gem 'bootstrap-sass', '~> 3.3.6'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
