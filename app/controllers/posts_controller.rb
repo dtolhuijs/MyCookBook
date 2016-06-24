@@ -30,7 +30,7 @@ class PostsController < ApplicationController
     @post.user = current_user
 
     if @post.save
-       redirect_to @post
+       redirect_to posts_path
     else
        render 'new'
     end
@@ -50,6 +50,9 @@ class PostsController < ApplicationController
       @user = User.find( params[:user_id] )
 
       @posts = Post.where( user: @user ).order( created_at: :desc )
+
+      @likes = @user.likes.joins( :post ).order( "posts.created_at DESC" )
+
    end
 
  private

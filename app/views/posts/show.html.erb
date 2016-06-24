@@ -1,12 +1,14 @@
 <div>
   <div>
-  <%= image_tag @post.image_url.to_s, class: 'bg' %>
   </div>
 
   <div class="content">
   <h1><%= @post.title %></h1>
   <br>
   <p><%= @post.content %></p>
+  <div>
+  <%= image_tag @post.image.url, class:'bg' %>
+  </div>
   <br>
     <br>
        <button type="button" class="btn btn-info"><%= link_to "Edit", edit_post_path( @post) %></button>
