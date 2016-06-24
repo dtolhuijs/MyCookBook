@@ -1,13 +1,22 @@
 <h1>My CookBook</h1>
 
-
-  <h2>Welcome</h2>
   <p>My Cookbook is a unique lifestyle network, website and magazine that connects viewers to the power and joy of food. The network strives to be viewers’ best friend in food and is committed to leading by teaching, inspiring and empowering through its talent and expertise.</p>
-  <p>
-    To be able to:<br>
-    - Post recipes - add favorites - make friends -<br>
-    you need to<br>
-  </p>
-  <a href="<%= new_user_path %>"><h2>Sign up now</h2></a>
+  <p>To be able to:</p>
+  <ul id="usps">
+    <li>- Post recipes -</li>
+    <li>- add favorites -</li>
+    <li>- make friends -</li>
+  </ul>
+  <p>you need to</p>
+  <a id="signup" href="<%= new_user_registration_path %>"><h2>Sign up now</h2></a>
   <p>or if you're already registered you can</p>
-  <a href="<%= users_path %>"><h2>Sign in here</h2></a>
+  <a id="signin" href="<%= user_session_path %>"><h2>Log in here</h2></a>
+
+  <script type="text/javascript">
+  $(document).ready(function(){
+    $('#usps').list_ticker({
+      speed:3000,
+      effect:'fade'
+    })
+  })
+  </script>
