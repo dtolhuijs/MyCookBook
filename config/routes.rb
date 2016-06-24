@@ -3,9 +3,11 @@ Rails.application.routes.draw do
 
   devise_for :users
 
-  resources :posts
   resources :users
   resources :site
+  resources :posts do
+  resources :likes
+  end
 
   root "site#home"
 end
