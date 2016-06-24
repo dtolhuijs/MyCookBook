@@ -1,6 +1,7 @@
 class Post < ActiveRecord::Base
-  belongs_to :user
   mount_uploader :image, ImageUploader
+  
+  belongs_to :user
 
   def handle
     self.email.split('@')[0]
