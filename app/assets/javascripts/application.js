@@ -15,9 +15,3 @@
 //= require turbolinks
 //= require_tree .
 //= require bootstrap-sprockets
-$(document).ready(function(){
-        $('#usps').list_ticker({
-                speed:3000,
-                effect:'fade'
-        })
-})

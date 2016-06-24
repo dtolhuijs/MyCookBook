@@ -35,6 +35,12 @@ h2 {
   font-size: 4em;
   color: #ffffff;
 }
+h4 {
+  margin: 0px 0px;
+  font-family: 'Amatic SC', cursive;
+  font-size: 2em;
+  color: #ffffff;
+}
 p {
   font-size: 1.25em;
   color: #006000;
@@ -55,6 +61,9 @@ a h2{
 a:hover h2{
   font-size: 4.5em;
 }
+a:hover {
+  text-decoration: none;
+}
 main ul {
   font-family: 'Amatic SC', cursive;
   font-size: 4em;
@@ -74,4 +83,20 @@ main p {
 main a {
   border: 2px solid #ffffff;
   color: #ffffff;
+}
+label {
+  color: #ffffff;
+}
+input {
+  padding: 8px 20px;
+  border: 0px;
+  border-radius: 8px;
+  background-color: #ffffff;
+  color: #006000;
+}
+.row {
+margin: 0px;
+}
+#user_avatar {
+  margin: 0px auto;
 }
