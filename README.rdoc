@@ -16,9 +16,12 @@ My CookBook is a simple social network for sharing your recipes, following and a
     - Layout can improve with an html editor for customazing articles
   
 == Collaborators
-  - Ramon https://github.com/RamonSchmitt
-  - Fiona https://github.com/FionaSelanno
-  - Deisi https://github.com/dtolhuijs
+
+ Ramon https://github.com/RamonSchmitt
+ 
+ Fiona https://github.com/FionaSelanno
+ 
+ Deisi https://github.com/dtolhuijs
 
 
 == Set Up
