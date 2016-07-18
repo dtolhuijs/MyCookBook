@@ -1,7 +1,6 @@
 == My CookBook
 My CookBook is a simple social network for sharing your recipes, following and adding favorite bloggers. 
 
---> https://secure-escarpment-59991.herokuapp.com/
 
 == What is working
     - User can upload photos
@@ -35,14 +34,10 @@ Please feel free to use a different markup language if you do not plan to run
 
 == Installation
 
-rake db:create
-
-rake db:migrate
-
-bundle
-
-rails s
-
-open http://localhost:3000
+```rake db:create
+   rake db:migrate
+   bundle
+   rails s
+   open http://localhost:3000
 
 == Project still work in Progress!
