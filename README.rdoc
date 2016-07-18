@@ -1,28 +1,37 @@
-== README
+== My CookBook
+My CookBook is a simple social network for sharing your recipes, following and adding favorite bloggers. 
+--> https://secure-escarpment-59991.herokuapp.com/
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+== What is working
+    - User can upload photos
+    - User can write and post articles
+    - User can like articles
+    - New users can sign in
+  
+== Issues
+    - Can't send friend requests
+    - Can't follow users
+    - layout needs improvement
+    - Layout can improve with an html editor for customazing articles
+  
+== Collaborators
+  - Ramon https://github.com/RamonSchmitt
+  - Fiona https://github.com/FionaSelanno
+  - Deisi https://github.com/dtolhuijs
 
-Things you may want to cover:
 
-* Ruby version
+== Set Up
 
-* System dependencies
-
-* Configuration
+* Ruby 2.2.5
 
 * Database creation
 
 * Database initialization
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Heroku deployment
 
 
 Please feel free to use a different markup language if you do not plan to run
 <tt>rake doc:app</tt>.
+
+== Project still work in Progress!
